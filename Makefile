@@ -1,27 +1,7 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2014/02/22 18:04:37 by tmerlier          #+#    #+#              #
-#    Updated: 2015/03/19 13:53:09 by tmerlier         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-# option
-
 CC = nasm
 FLAGS = -f macho64
-
-# path
-
 HEADER = includes/
 SRCDIR = srcs/
-
-# Files
-
 NAME = libfts.a
 
 SRC = bzero.s
