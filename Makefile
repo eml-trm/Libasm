@@ -7,7 +7,8 @@ SRCDIR = srcs/
 NAME = libfts.a
 
 SRC = ft_isdigit.s \
-	  ft_isalpha.s
+	  ft_isalpha.s \
+	  ft_isascii.s
 
 O_FILES = $(SRC:.s=.o)
 
