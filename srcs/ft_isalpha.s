@@ -1,33 +1,34 @@
 section .text
-	global _ft_isaplha
-_ft_isaplha:
+	global _ft_isalpha
+
+_ft_isalpha:
 	push rsp
 	mov rsp, rdi
-	cmp rsp, 65
-	jnl is_maj
-	jng is_false
+	cmp rsp, 65 ; = 'A'
+	jge is_maj ; >=
+	jl is_false ; <
 
 is_maj:
-	cmp rsp, 90
-	jng is_true
-	jnl is_not_maj
+	cmp rsp, 90 ; = 'Z'
+	jle is_true ; <=
+	jg is_not_maj ; >
 
 is_not_maj:
-	cmp rsp, 97
-	jnl is_min
-	jng is_false
+	cmp rsp, 97 ; = 'a'
+	jge is_min ; >=
+	jl is_false ; <
 
 is_min:
-	cmp rsp, 122
-	jng is_true
-	jnl is_false
+	cmp rsp, 122 ; = 'z'
+	jle is_true ; <=
+	jg is_false ; >
 
 is_false:
 	mov rax, 0
-	leave
+	pop rsp
 	ret
 
 is_true:
 	mov rax, 1
-	leave
+	pop rsp
 	ret

@@ -27,7 +27,7 @@ $(NAME): $(O_FILES)
 	@ar -rcs $(NAME) $@
 
 test: $(NAME)
-	@$(CC) $(FLAGS) $< tests/main.c
+	@$(CC) $(FLAGS) $< tests/main.c -I $(HEADER)
 
 clean:
 	@rm -f $(O_FILES)
