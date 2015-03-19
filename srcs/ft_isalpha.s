@@ -4,24 +4,24 @@ section .text
 _ft_isalpha:
 	push rbx
 	mov ebx, edi
-	cmp ebx, 65 ; = 'A'
-	jge is_maj ; >=
-	jl is_false ; <
+	cmp ebx, 65
+	jge is_maj
+	jl is_false
 
 is_maj:
-	cmp ebx, 90 ; = 'Z'
-	jle is_true ; <=
-	jg is_not_maj ; >
+	cmp ebx, 90
+	jle is_true
+	jg is_not_maj
 
 is_not_maj:
-	cmp ebx, 97 ; = 'a'
-	jge is_min ; >=
-	jl is_false ; <
+	cmp ebx, 97
+	jge is_min
+	jl is_false
 
 is_min:
-	cmp ebx, 122 ; = 'z'
-	jle is_true ; <=
-	jg is_false ; >
+	cmp ebx, 122
+	jle is_true
+	jg is_false
 
 is_false:
 	mov eax, 0
