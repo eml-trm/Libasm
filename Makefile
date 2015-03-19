@@ -1,30 +1,31 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2014/02/22 18:04:37 by tmerlier          #+#    #+#              #
-#    Updated: 2015/03/19 13:17:03 by tmerlier         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+; **************************************************************************** ;
+;                                                                              ;
+;                                                         :::      ::::::::    ;
+;    Makefile                                           :+:      :+:    :+:    ;
+;                                                     +:+ +:+         +:+      ;
+;    By: tmerlier <tmerlier@student.42.fr>          +;+  +:+       +;+         ;
+;                                                 +;+;+;+;+;+   +;+            ;
+;    Created: 2014/02/22 18:04:37 by tmerlier          ;+;    ;+;              ;
+;    Updated: 2015/03/19 13:17:03 by tmerlier         ;;;   ;;;;;;;;.fr        ;
+;                                                                              ;
+; **************************************************************************** ;
 
-# option
+; option
 
 CC = nasm
 FLAGS = -f macho64 -macosx_version_min 10.8 -lSystem
 
-# path
+; path
 
 HEADER = includes/
 SRCDIR = srcs/
 
-# Files
+; Files
 
 NAME = libfts.a
 
-SRC = bzero.s
+SRC = ft_bzero.s \
+	  ft_strcat.s \
 
 O_FILES = $(SRC:.s=.o)
 
