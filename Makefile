@@ -8,7 +8,8 @@ NAME = libfts.a
 
 SRC = ft_isdigit.s \
 	  ft_isalpha.s \
-	  ft_isascii.s
+	  ft_isascii.s \
+	  ft_isalnum.s
 
 O_FILES = $(SRC:.s=.o)
 
