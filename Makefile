@@ -1,10 +1,13 @@
-CC = ~/.brew/Cellar/nasm/2.11.06/bin/nasm
-FLAGS = -f macho64
+cc = gcc
+ASM = nasm
+ASMFLAGS = -f macho64
+FLAGS = -Wall -Wextra -Werror
 HEADER = includes/
 SRCDIR = srcs/
 NAME = libfts.a
 
-SRC = ft_bzero.s
+SRC = ft_isdigit.s \
+	  ft_isalpha.s
 
 O_FILES = $(SRC:.s=.o)
 
@@ -15,19 +18,22 @@ STATE = Updated
 all: $(NAME)
 
 $(NAME): $(O_FILES)
-	ranlib $(NAME)
-	echo "\033[3;32m$(NAME) Successfully $(STATE)\033[0m"
+	@ranlib $(NAME)
+	@echo "\033[3;32m$(NAME) Successfully $(STATE)\033[0m"
 
 %.o: $(SRCDIR)%.s
-	$(CC) $(FLAGS) $< -o $@
-	ld $@ -macosx_version_min 10.8 -lSystem
-	ar -rcs $(NAME) $@
+	@$(ASM) $(ASMFLAGS) $< -o $@ -I $(HEADER)
+	# ld $@ -macosx_version_min 10.8 -lSystem
+	@ar -rcs $(NAME) $@
+
+test: $(NAME)
+	@$(CC) $(FLAGS) $< tests/main.c
 
 clean:
-	rm -f $(O_FILES)
+	@rm -f $(O_FILES)
 
 fclean: clean
-	$(eval STATE = Created)
-	rm -f $(NAME)
+	@$(eval STATE = Created)
+	@rm -f $(NAME)
 
 re: fclean all
