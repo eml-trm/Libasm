@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: etermeau <etermeau@student.42.fr>          +#+  +:+       +#+         #
+#    By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2015/03/19 13:09:37 by etermeau          #+#    #+#              #
-#    Updated: 2015/03/19 13:09:39 by etermeau         ###   ########.fr        #
+#    Created: 2014/02/22 18:04:37 by tmerlier          #+#    #+#              #
+#    Updated: 2015/03/19 13:17:03 by tmerlier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # option
 
-CC = gcc
-FLAGS = -Wall -Werror -Wextra
+CC = nasm
+FLAGS = -f macho64 -macosx_version_min 10.8 -lSystem
 
 # path
 
@@ -22,29 +22,31 @@ SRCDIR = srcs/
 
 # Files
 
-LIB = libft.a
-SRC =
+NAME = libfts.a
 
-O_FILES = $(SRC:.c=.o)
+SRC = bzero.s
+
+O_FILES = $(SRC:.s=.o)
 
 STATE = Updated
 
 .PHONY: all clean fclean re
 
-all: $(LIB)
+all: $(NAME)
 
-$(LIB): $(O_FILES)
-    @ranlib $(LIB)
+$(NAME): $(O_FILES)
+	@ranlib $(NAME)
+	@echo "\033[3;32m$(NAME) Successfully $(STATE)\033[0m"
 
-%.o: $(SRCDIR)%.c
-    @$(CC) -o $@ $(FLAGS) -I $(HEADER) -c $<
-    @ar -rcs $(LIB) $@
+%.o: $(SRCDIR)%.s
+	@$(CC) $< -o $@
+	@ar -rcs $(NAME) $@
 
 clean:
-    @rm -f $(O_FILES)
+	@rm -f $(O_FILES)
 
 fclean: clean
-    $(eval STATE = Created)
-    @rm -f $(LIB)
+	$(eval STATE = Created)
+	@rm -f $(NAME)
 
 re: fclean all
