@@ -6,7 +6,7 @@
 /*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 18:20:56 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/19 19:07:24 by tmerlier         ###   ########.fr       */
+/*   Updated: 2015/03/19 19:46:38 by tmerlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,13 @@ int main(void)
 	printf("/////////////// FT_ISALPHA ///////////////\n");
 	printf("ft_isalpha(%c) = %d\n", digit, ft_isalpha(digit));
 	printf("ft_isalpha(%c) = %d\n\n\n", alpha, ft_isalpha(alpha));
+
+	int		spc = ' ';
+
+	printf("/////////////// FT_ISALNUM ///////////////\n");
+	printf("ft_isalnum(%c) = %d\n", digit, ft_isalnum(digit));
+	printf("ft_isalnum(%c) = %d\n", alpha, ft_isalnum(alpha));
+	printf("ft_isalnum(%c) = %d\n\n\n", spc, ft_isalnum(spc));
+
 	return 0;
 }
