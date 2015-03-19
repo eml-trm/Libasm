@@ -6,14 +6,14 @@
 #    By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/02/22 18:04:37 by tmerlier          #+#    #+#              #
-#    Updated: 2015/03/19 13:17:03 by tmerlier         ###   ########.fr        #
+#    Updated: 2015/03/19 13:53:09 by tmerlier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # option
 
 CC = nasm
-FLAGS = -f macho64 -macosx_version_min 10.8 -lSystem
+FLAGS = -f macho64
 
 # path
 
@@ -40,6 +40,7 @@ $(NAME): $(O_FILES)
 
 %.o: $(SRCDIR)%.s
 	@$(CC) $< -o $@
+	@ ld $@ -macosx_version_min 10.8 -lSystem
 	@ar -rcs $(NAME) $@
 
 clean:
