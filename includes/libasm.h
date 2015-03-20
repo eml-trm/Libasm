@@ -21,6 +21,6 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_strlen(char *str);
-char	*ft_strcat(char *s1, char *s2);
+char	*ft_strcat(char *s1, const char *s2);
 
 #endif

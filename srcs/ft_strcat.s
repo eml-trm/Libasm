@@ -1,9 +1,28 @@
 section .text
 	global _ft_strcat
-	extern _ft_strlen
 
 _ft_strcat:
-	push rbx
+	push rbp
+	mov rbp, rsp
 	mov rbx, rdi
-	mov rdx, 0
-	mov rcx, _ft_strlen
+
+while:
+	cmp byte [rbx], 0
+	je while2
+	inc rbx
+	jmp while
+
+while2:
+	cmp byte [rsi], 0
+	je end
+	mov al, byte [rsi]
+	mov byte [rbx], al
+	inc rsi
+	inc rbx
+	jmp while2
+
+end:
+	mov byte [rbx], 0
+	mov rax, rdi
+	leave
+	ret

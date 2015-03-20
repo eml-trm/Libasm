@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <libasm.h>
 
 int main(void)
@@ -53,22 +54,47 @@ int main(void)
 	printf("ft_tolower(%c) = %c\n", maj, ft_tolower(maj));
 	printf("ft_tolower(%c) = %c\n\n\n", min, ft_tolower(min));
 
-	char	*len = "01234";
-	char	*len_null = NULL;
+	// char	*len = "01234";
+	// char	*len_null = NULL;
 
-	printf("/////////////// FT_STRLEN ///////////////\n");
-	printf("ft_strlen(%s) = %d\n", len, ft_strlen(len));
-	printf("ft_strlen(%s) = %d\n\n\n", len_null, ft_strlen(len_null));
+	// printf("/////////////// FT_STRLEN ///////////////\n");
+	// printf("ft_strlen(%s) = %d\n", len, ft_strlen(len));
+	// printf("ft_strlen(%s) = %d\n\n\n", len_null, ft_strlen(len_null));
 
-	// char	*test = "Bonjour";
-	// char	*test2 = "Cadeau";
-	// char	*test3 = "Chat";
-	// char	*test4 = "Lapin";
+	char	*test;
+	char	*test2;
 
-	// printf("/////////////// FT_STRCAT ///////////////\n");
-	// printf("ft_strcat(%s, %s) = %s\n", test, test2, ft_strcat(test, test2)));
-	// printf("ft_strcat(%s, %s) = %s\n\n\n", test3, test4, ft_strcat(test3, test4)));
 
+	test = "Chapeau";
+	test2 = "Bonbon";
+
+	printf("/////////////// FT_STRCAT ///////////////\n");
+	printf("ft_strcat(%s, %s) = %s\n\n\n", test, test2, ft_strcat(test, test2));
 
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
