@@ -19,5 +19,6 @@ int		ft_isascii(int c);
 int		ft_isalnum(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
+char	*ft_strcat(char *c);
 
 #endif

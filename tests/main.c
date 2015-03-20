@@ -48,5 +48,14 @@ int main(void)
 	printf("/////////////// FT_TOUPPER ///////////////\n");
 	printf("ft_isalnum(%c) = %c\n", maj, ft_toupper(maj));
 	printf("ft_isalnum(%c) = %c\n\n\n", min, ft_toupper(min));
+
+	char	*test = "Bonjour";
+	char	*test2 = "Cadeau";
+	char	*test3 = "Chat";
+	char	*test4 = "Lapin";
+
+	printf("/////////////// FT_STRCAT ///////////////\n");
+	printf("ft_strcat(%s, %s) = %s\n", test, test2, ft_strcat(test, test2)));
+	printf("ft_strcat(%s, %s) = %s\n\n\n", test3, test4, ft_strcat(test3, test4)));
 	return 0;
 }
