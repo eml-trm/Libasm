@@ -6,7 +6,7 @@
 /*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 18:20:56 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/20 12:03:38 by tmerlier         ###   ########.fr       */
+/*   Updated: 2015/03/20 14:20:16 by tmerlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,21 @@ int main(void)
 	printf("ft_tolower(%c) = %c\n", maj, ft_tolower(maj));
 	printf("ft_tolower(%c) = %c\n\n\n", min, ft_tolower(min));
 
-	char	*test = "Bonjour";
-	char	*test2 = "Cadeau";
-	char	*test3 = "Chat";
-	char	*test4 = "Lapin";
+	char	*len = "01234";
+	char	*len_null = NULL;
 
-	printf("/////////////// FT_STRCAT ///////////////\n");
-	printf("ft_strcat(%s, %s) = %s\n", test, test2, ft_strcat(test, test2)));
-	printf("ft_strcat(%s, %s) = %s\n\n\n", test3, test4, ft_strcat(test3, test4)));
+	printf("/////////////// FT_STRLEN ///////////////\n");
+	printf("ft_strlen(%s) = %d\n", len, ft_strlen(len));
+	printf("ft_strlen(%s) = %d\n\n\n", len_null, ft_strlen(len_null));
+
+	// char	*test = "Bonjour";
+	// char	*test2 = "Cadeau";
+	// char	*test3 = "Chat";
+	// char	*test4 = "Lapin";
+
+	// printf("/////////////// FT_STRCAT ///////////////\n");
+	// printf("ft_strcat(%s, %s) = %s\n", test, test2, ft_strcat(test, test2)));
+	// printf("ft_strcat(%s, %s) = %s\n\n\n", test3, test4, ft_strcat(test3, test4)));
 
 	return 0;
 }
