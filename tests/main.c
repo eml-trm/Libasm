@@ -6,7 +6,7 @@
 /*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 18:20:56 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/19 19:46:38 by tmerlier         ###   ########.fr       */
+/*   Updated: 2015/03/20 12:03:38 by tmerlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,12 @@ int main(void)
 	int		min = 'b';
 
 	printf("/////////////// FT_TOUPPER ///////////////\n");
-	printf("ft_isalnum(%c) = %c\n", maj, ft_toupper(maj));
-	printf("ft_isalnum(%c) = %c\n\n\n", min, ft_toupper(min));
+	printf("ft_toupper(%c) = %c\n", maj, ft_toupper(maj));
+	printf("ft_toupper(%c) = %c\n\n\n", min, ft_toupper(min));
+
+	printf("/////////////// FT_TOLOWER ///////////////\n");
+	printf("ft_tolower(%c) = %c\n", maj, ft_tolower(maj));
+	printf("ft_tolower(%c) = %c\n\n\n", min, ft_tolower(min));
 
 	char	*test = "Bonjour";
 	char	*test2 = "Cadeau";
@@ -57,5 +61,6 @@ int main(void)
 	printf("/////////////// FT_STRCAT ///////////////\n");
 	printf("ft_strcat(%s, %s) = %s\n", test, test2, ft_strcat(test, test2)));
 	printf("ft_strcat(%s, %s) = %s\n\n\n", test3, test4, ft_strcat(test3, test4)));
+
 	return 0;
 }
