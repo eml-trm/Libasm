@@ -59,8 +59,8 @@ int main(void)
 	char	*test4 = "Lapin";
 
 	printf("/////////////// FT_STRCAT ///////////////\n");
-	printf("ft_strcat(%s, %s) = %s\n", test, test2, ft_strcat(test, test2)));
-	printf("ft_strcat(%s, %s) = %s\n\n\n", test3, test4, ft_strcat(test3, test4)));
+	printf("ft_strcat(%s, %s) = %s\n", test, test2, ft_strcat(test, test2));
+	printf("ft_strcat(%s, %s) = %s\n\n\n", test3, test4, ft_strcat(test3, test4));
 
 	return 0;
 }
