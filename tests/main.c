@@ -41,5 +41,12 @@ int main(void)
 	printf("ft_isalnum(%c) = %d\n", digit, ft_isalnum(digit));
 	printf("ft_isalnum(%c) = %d\n", alpha, ft_isalnum(alpha));
 	printf("ft_isalnum(%c) = %d\n\n\n", spc, ft_isalnum(spc));
+
+	int		maj = 'F';
+	int		min = 'b';
+
+	printf("/////////////// FT_TOUPPER ///////////////\n");
+	printf("ft_isalnum(%c) = %c\n", maj, ft_toupper(maj));
+	printf("ft_isalnum(%c) = %c\n\n\n", min, ft_toupper(min));
 	return 0;
 }
