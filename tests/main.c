@@ -54,24 +54,21 @@ int main(void)
 	printf("ft_tolower(%c) = %c\n", maj, ft_tolower(maj));
 	printf("ft_tolower(%c) = %c\n\n\n", min, ft_tolower(min));
 
-	// char	*len = "01234";
-	// char	*len_null = NULL;
+	char	*len = "01234";
 
-	// printf("/////////////// FT_STRLEN ///////////////\n");
-	// printf("ft_strlen(%s) = %d\n", len, ft_strlen(len));
-	// printf("ft_strlen(%s) = %d\n\n\n", len_null, ft_strlen(len_null));
+	printf("/////////////// FT_STRLEN ///////////////\n");
+	printf("ft_strlen(%s) = %d\n\n\n", len, ft_strlen(len));
 
-	char	*test;
-	char	*test2;
-
-
-	test = "Chapeau";
-	test2 = "Bonbon";
+	char	str1[] = "123456";
+	char	str2[] = "Bbb";
+	char	*str3;
 
 	printf("/////////////// FT_STRCAT ///////////////\n");
-	printf("ft_strcat(%s, %s) = %s\n\n\n", test, test2, ft_strcat(test, test2));
-
-	return 0;
+	printf("str1 = %s\nstr2 = %s\n", str1,str2);
+	str3 = (char *)malloc(sizeof(char) * 15);
+	str3 = ft_strcat(str1, str2);
+	printf("'%s'\n", str3);
+	return (0);
 }
 
 
