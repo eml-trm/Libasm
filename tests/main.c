@@ -16,6 +16,7 @@
 
 int main(void)
 {
+
 	int		digit = '5';
 	int		alpha = 'H';
 
@@ -75,6 +76,14 @@ int main(void)
 	str3 = (char *)malloc(sizeof(char) * 15);
 	str3 = ft_strcat(str1, str2);
 	printf("ft_strcat() = '%s'\n\n\n", str3);
+
+	char put[] = "ça affiche bien!";
+
+	printf("/////////////// FT_PUTS ///////////////\n");
+	ft_puts(put);
+	ft_puts("\n");
+	ft_puts(NULL);
+	ft_puts("\n\n");
 
 	return (0);
 }
