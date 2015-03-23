@@ -13,7 +13,8 @@ SRC = ft_isdigit.s \
 	  ft_toupper.s \
 	  ft_tolower.s \
 	  ft_strlen.s \
-	  ft_strcat.s
+	  ft_strcat.s \
+	  ft_bzero.s
 
 O_FILES = $(SRC:.s=.o)
 

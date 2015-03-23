@@ -6,7 +6,7 @@
 /*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 18:20:56 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/20 14:20:16 by tmerlier         ###   ########.fr       */
+/*   Updated: 2015/03/23 15:08:40 by tmerlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,17 +57,25 @@ int main(void)
 	char	*len = "01234";
 
 	printf("/////////////// FT_STRLEN ///////////////\n");
-	printf("ft_strlen(%s) = %d\n\n\n", len, ft_strlen(len));
+	printf("ft_strlen(%s) = %zu\n\n\n", len, ft_strlen(len));
 
-	char	str1[] = "123456";
-	char	str2[] = "Bbb";
+	char	str[] = "Born2Code";
+
+	printf("/////////////// FT_BZERO ///////////////\n");
+	printf("str = %s\n", str);
+	ft_bzero(str + 4, 5);
+	printf("ft_bzero(\"Born2Code\" + 4, 5) = %s\n\n\n", str);
+
+	char	str1[] = "École ";
+	char	str2[] = "42";
 	char	*str3;
 
 	printf("/////////////// FT_STRCAT ///////////////\n");
 	printf("str1 = %s\nstr2 = %s\n", str1,str2);
 	str3 = (char *)malloc(sizeof(char) * 15);
 	str3 = ft_strcat(str1, str2);
-	printf("'%s'\n", str3);
+	printf("ft_strcat() = '%s'\n\n\n", str3);
+
 	return (0);
 }
 
