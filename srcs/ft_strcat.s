@@ -4,6 +4,7 @@ section .text
 _ft_strcat:
 	push rbp
 	mov rbp, rsp
+	push rbx
 	mov rbx, rdi
 
 while:
@@ -24,5 +25,7 @@ while2:
 end:
 	mov byte [rbx], 0
 	mov rax, rdi
-	leave
+	pop rbx
+	mov rsp, rbp
+	pop rbp
 	ret

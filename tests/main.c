@@ -6,7 +6,7 @@
 /*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 18:20:56 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/23 15:08:40 by tmerlier         ###   ########.fr       */
+/*   Updated: 2015/03/23 17:49:03 by tmerlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int main(void)
 	char	*str3;
 
 	printf("/////////////// FT_STRCAT ///////////////\n");
-	printf("str1 = %s\nstr2 = %s\n", str1,str2);
+	printf("str1 = '%s'\nstr2 = '%s'\n", str1,str2);
 	str3 = (char *)malloc(sizeof(char) * 15);
 	str3 = ft_strcat(str1, str2);
 	printf("ft_strcat() = '%s'\n\n\n", str3);
