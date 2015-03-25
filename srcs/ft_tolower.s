@@ -15,7 +15,7 @@ false:
 
 is_maj:
 	cmp ebx, 90
-	jge false
+	jg false
 	jl convert
 
 convert:
