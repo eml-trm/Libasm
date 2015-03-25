@@ -85,7 +85,7 @@ int main(void)
 	str3 = ft_strcat(str1, str2);
 	printf("ft_strcat() = '%s'\n\n\n", str3);
 
-	char put[] = "ça affiche bien!";
+	char put[] = "ft_puts affiche bien!";
 
 	printf("/////////////// FT_PUTS ///////////////\n");
 	ft_puts(put);
