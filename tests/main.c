@@ -6,7 +6,7 @@
 /*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 18:20:56 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/25 17:52:30 by tmerlier         ###   ########.fr       */
+/*   Updated: 2015/03/25 18:54:59 by tmerlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,9 +111,9 @@ int main(void)
 	free(dup);
 	printf("dup has been freed\n\n\n");
 
-	// printf("/////////////// FT_CAT ///////////////\n");
-	// int fd = open("auteur", O_RDONLY);
-	// ft_cat(fd);
+	printf("/////////////// FT_CAT ///////////////\n");
+	int fd = open("auteur", O_RDONLY);
+	ft_cat(fd);
 	return (0);
 }
 
