@@ -6,13 +6,14 @@
 /*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 18:20:56 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/25 10:53:21 by tmerlier         ###   ########.fr       */
+/*   Updated: 2015/03/25 13:20:49 by tmerlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <libasm.h>
+#include <string.h>
 
 
 	#include <ctype.h>
@@ -91,6 +92,14 @@ int main(void)
 	ft_puts("\n");
 	ft_puts(NULL);
 	ft_puts("\n\n");
+
+	char	*strset = strdup("Born2Code");
+
+	printf("/////////////// FT_MEMSET ///////////////\n");
+	printf("strset = '%s'\n", strset);
+	ft_memset(strset, 'C', 3);
+	printf("ft_memset(strset) = '%s'\n\n\n", strset);
+	free(strset);
 
 	return (0);
 }
