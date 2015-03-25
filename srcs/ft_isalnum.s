@@ -7,7 +7,7 @@ _ft_isalnum:
 	cmp ebx, 'a'
 	jge min_alpha
 	cmp ebx, 'A'
-	jge min_alpha
+	jge maj_alpha
 	cmp ebx, '0'
 	jge digit
 	mov eax, 0
