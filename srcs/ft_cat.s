@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-section .text
-	global _ft_cat
-
-_ft_cat:
-	push rbx
-	mov rbx, rdi
-
-=======
 %define SYSCALL(nb) 0x2000000 | nb
 %define READ 3
 
@@ -30,4 +21,3 @@ _ft_cat:
 	call _ft_puts
 	leave
 	ret
->>>>>>> 3d68084c9907ccbd5d7a147ce59a8c05490d8f5e

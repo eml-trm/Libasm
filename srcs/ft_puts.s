@@ -3,7 +3,8 @@
 %define WRITE 4
 
 section .data
-	nul db "(null)", 10
+	nul db "(null)"
+	n db 10
 
 section .text
 	global _ft_puts
@@ -29,7 +30,7 @@ write:
 	jmp end
 
 write_null:
-	mov rdx, 7
+	mov rdx, 6
 	mov rdi, STDOUT
 	lea rsi, [rel nul]
 	mov rax, SYSCALL(WRITE)
@@ -37,6 +38,11 @@ write_null:
 	jmp end
 
 end:
+	mov rdx, 1
+	mov rdi, STDOUT
+	lea rsi, [rel n]
+	mov rax, SYSCALL(WRITE)
+	syscall
 	mov rax, 1
 	pop rbp
 	ret

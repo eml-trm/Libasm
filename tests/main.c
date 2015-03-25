@@ -83,14 +83,11 @@ int main(void)
 	str3 = ft_strcat(str1, str2);
 	printf("ft_strcat() = '%s'\n\n\n", str3);
 
-	char put[] = "ft_puts affiche bien!";
-
 	printf("/////////////// FT_PUTS ///////////////\n");
-	ft_puts(put);
-	ft_puts("\n");
+	ft_puts("aaa");
+	ft_puts("Bien le bonjour");
 	ft_puts(NULL);
-	ft_puts("\n\n");
-
+	ft_puts("\n");
 	char	*strset = strdup("Born2Code");
 
 	printf("/////////////// FT_MEMSET ///////////////\n");
