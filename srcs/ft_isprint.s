@@ -1,17 +1,17 @@
 section .text
-	global _ft_isascii
+	global _ft_isprint
 
-_ft_isascii:
+_ft_isprint:
 	push rbx
 	mov ebx, edi
-	cmp ebx, 0
+	cmp ebx, 32
 	jge check
 	mov eax, 0
 	pop rbx
 	ret
 
 check:
-	cmp ebx, 127
+	cmp ebx, 126
 	jle is_true
 	mov eax, 0
 	pop rbx

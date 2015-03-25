@@ -6,7 +6,7 @@
 /*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 18:20:56 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/23 17:49:03 by tmerlier         ###   ########.fr       */
+/*   Updated: 2015/03/25 10:53:21 by tmerlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <stdlib.h>
 #include <libasm.h>
 
+
+	#include <ctype.h>
 int main(void)
 {
 
@@ -28,16 +30,21 @@ int main(void)
 	printf("ft_isalpha(%c) = %d\n", digit, ft_isalpha(digit));
 	printf("ft_isalpha(%c) = %d\n\n\n", alpha, ft_isalpha(alpha));
 
-	int		ascii = 127; /* 127 = del*/
-	int		ascii2 = 20; /* 20 = dc4 */
-
 	printf("/////////////// FT_ISASCII ///////////////\n");
-	printf("ft_isascii(%c) = %d\n", digit, ft_isascii(digit));
-	printf("ft_isascii(%c) = %d\n", alpha, ft_isascii(alpha));
-	printf("ft_isascii(%c) = %d\n", ascii2, ft_isascii(ascii2));
-	printf("ft_isascii(%c) = %d\n\n\n", ascii, ft_isascii(ascii));
+	printf("ft_isascii(-1) = %d\n", ft_isascii(-1));
+	printf("ft_isascii(42) = %d\n", ft_isascii(42));
+	printf("ft_isascii(128) = %d\n\n\n", ft_isascii(128));
 
+	int		ascii_del = 127; /* 127 = del*/
+	int		ascii_dc4 = 20; /* 20 = dc4 */
 	int		spc = ' ';
+
+	printf("/////////////// FT_ISPRINT ///////////////\n");
+	printf("ft_isprint(%c) = %d\n", digit, ft_isprint(digit));
+	printf("ft_isprint(%c) = %d\n", alpha, ft_isprint(alpha));
+	printf("ft_isprint(%c) = %d\n", spc, ft_isprint(spc));
+	printf("ft_isprint('dc4') = %d\n", ft_isprint(ascii_dc4));
+	printf("ft_isprint('del') = %d\n\n\n", ft_isprint(ascii_del));
 
 	printf("/////////////// FT_ISALNUM ///////////////\n");
 	printf("ft_isalnum(%c) = %d\n", digit, ft_isalnum(digit));
