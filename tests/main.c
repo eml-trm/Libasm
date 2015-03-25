@@ -85,7 +85,7 @@ int main(void)
 	str3 = ft_strcat(str1, str2);
 	printf("ft_strcat() = '%s'\n\n\n", str3);
 
-	char put[] = "ça affiche bien!";
+	char put[] = "ft_puts affiche bien!";
 
 	printf("/////////////// FT_PUTS ///////////////\n");
 	ft_puts(put);
@@ -108,6 +108,12 @@ int main(void)
 	printf("src_cpy = '%s'\ndest_cpy = '%s'\n", src_cpy, dest_cpy);
 	ft_memcpy(dest_cpy, src_cpy, 3);
 	printf("ft_memcpy(src_cpy, dest_cpy, 3) = '%s'\n\n\n", dest_cpy);
+
+	char *dup = ft_strdup("Cacao");
+
+	printf("/////////////// FT_STRDUP ///////////////\n");
+	printf("dup = '%s'\n", dup);
+	free(dup);
 
 	return (0);
 }

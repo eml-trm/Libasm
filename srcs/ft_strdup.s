@@ -3,23 +3,30 @@ section .text
 
 extern _ft_strlen
 extern _malloc
-extern _ft_memcpy
 
 _ft_strdup:
 	push rbx
 	mov rbx, rdi
-	cmp rdi, byte 0
-	je return
+	cmp rdi, 0
+	je return0
 	call _ft_strlen
 	mov rdi, rax
+	mov rcx, rax
+	add rdi, 1
+	push rdi
 	call _malloc
-	mov ecx, 7; set up a constant
-	mov [rax], ecx; write it into memory
-	mov edx, [rax]; read it back from memory
-	mov eax, edx; copy into return value register
-	ret
+	mov rdi, rax
+	mov rsi, rbx
+	pop rcx
+	cld
+	rep movsb
+	jmp return
 
 return:
-	mov rax, rbx
-	pop rbx
+	pop rdi
+	ret
+
+return0:
+	mov rax, 0
+	leave
 	ret
