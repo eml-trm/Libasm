@@ -6,7 +6,7 @@
 /*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 13:08:18 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/25 13:37:59 by tmerlier         ###   ########.fr       */
+/*   Updated: 2015/03/25 15:56:11 by tmerlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ int			ft_puts(const char *s);
 size_t		ft_strlen(const char *s);
 void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
-// • strdup (bien entendu, vous pouvez appeller malloc)
+char		*ft_strdup(const char *s1);
 #endif
