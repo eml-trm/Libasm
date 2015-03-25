@@ -6,7 +6,7 @@
 /*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 18:20:56 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/25 13:41:39 by tmerlier         ###   ########.fr       */
+/*   Updated: 2015/03/25 17:52:30 by tmerlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 #include <stdlib.h>
 #include <libasm.h>
 #include <string.h>
-
-
-	#include <ctype.h>
+#include <fcntl.h>
 int main(void)
 {
 
@@ -52,8 +50,8 @@ int main(void)
 	printf("ft_isalnum(%c) = %d\n", alpha, ft_isalnum(alpha));
 	printf("ft_isalnum(%c) = %d\n\n\n", spc, ft_isalnum(spc));
 
-	int		maj = 'F';
-	int		min = 'b';
+	int		maj = 'Z';
+	int		min = 'z';
 
 	printf("/////////////// FT_TOUPPER ///////////////\n");
 	printf("ft_toupper(%c) = %c\n", maj, ft_toupper(maj));
@@ -114,7 +112,11 @@ int main(void)
 	printf("/////////////// FT_STRDUP ///////////////\n");
 	printf("dup = '%s'\n", dup);
 	free(dup);
+	printf("dup has been freed\n\n\n");
 
+	// printf("/////////////// FT_CAT ///////////////\n");
+	// int fd = open("auteur", O_RDONLY);
+	// ft_cat(fd);
 	return (0);
 }
 
