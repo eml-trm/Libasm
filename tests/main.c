@@ -6,7 +6,7 @@
 /*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 18:20:56 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/25 13:20:49 by tmerlier         ###   ########.fr       */
+/*   Updated: 2015/03/25 13:41:39 by tmerlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,22 @@ int main(void)
 	printf("/////////////// FT_MEMSET ///////////////\n");
 	printf("strset = '%s'\n", strset);
 	ft_memset(strset, 'C', 3);
-	printf("ft_memset(strset) = '%s'\n\n\n", strset);
+	printf("ft_memset(strset, 'C', 3) = '%s'\n\n\n", strset);
 	free(strset);
+
+	char	*src_cpy = strdup("Coucou");
+	char	*dest_cpy = strdup("Bingo");
+
+	printf("/////////////// FT_MEMCPY ///////////////\n");
+	printf("src_cpy = '%s'\ndest_cpy = '%s'\n", src_cpy, dest_cpy);
+	ft_memcpy(dest_cpy, src_cpy, 3);
+	printf("ft_memcpy(src_cpy, dest_cpy, 3) = '%s'\n\n\n", dest_cpy);
+
+	char *dup = ft_strdup("Cacao");
+
+	printf("/////////////// FT_STRDUP ///////////////\n");
+	printf("dup = '%s'\n", dup);
+	free(dup);
 
 	return (0);
 }
