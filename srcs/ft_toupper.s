@@ -15,7 +15,7 @@ false:
 
 is_min:
 	cmp ebx, 122
-	jge false
+	jg false
 	jl convert
 
 convert:
