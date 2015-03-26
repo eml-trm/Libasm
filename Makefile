@@ -37,7 +37,6 @@ $(NAME): $(O_FILES)
 
 %.o: $(SRCDIR)%.s
 	@$(ASM) $(ASMFLAGS) $< -o $@ -I $(HEADER)
-	# ld $@ -macosx_version_min 10.8 -lSystem
 	@ar -rcs $(NAME) $@
 
 test: $(NAME)

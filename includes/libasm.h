@@ -6,7 +6,7 @@
 /*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 13:08:18 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/25 17:00:23 by tmerlier         ###   ########.fr       */
+/*   Updated: 2015/03/26 14:56:54 by tmerlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ void		ft_cat(int fd);
 /*
 ** BONUS
 */
-int			ft_putstr(const char *s);
+void		ft_putstr(const char *s);
 
 #endif
