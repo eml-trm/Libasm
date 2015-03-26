@@ -40,4 +40,9 @@ char		*ft_strdup(const char *s1);
 */
 void		ft_cat(int fd);
 
+/*
+** BONUS
+*/
+int			ft_putstr(const char *s);
+
 #endif

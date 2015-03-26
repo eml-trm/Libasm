@@ -20,7 +20,8 @@ SRC = ft_isdigit.s \
 	  ft_memset.s \
 	  ft_memcpy.s \
 	  ft_strdup.s \
-	  ft_cat.s
+	  ft_cat.s \
+	  ft_putstr.s
 
 O_FILES = $(SRC:.s=.o)
 
