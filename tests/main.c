@@ -111,9 +111,9 @@ int main(void)
 	free(dup);
 	printf("dup has been freed\n\n\n");
 
-	// printf("/////////////// FT_CAT ///////////////\n");
-	// int fd = open("auteur", O_RDONLY);
-	// ft_cat(fd);
+	printf("/////////////// FT_CAT ///////////////\n");
+	int fd = open("Makefile", O_RDONLY);
+	ft_cat(fd);
 	return (0);
 }
 

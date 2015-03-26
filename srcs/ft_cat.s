@@ -2,10 +2,8 @@
 %define READ 3
 
 section .data
-	bufsize dw 1024
-
-section .bss
-	buf resb 1024
+	buf times 300 db 0
+	buffsize equ $ - buf
 
 section .text
 	global _ft_cat
@@ -13,11 +11,11 @@ section .text
 
 _ft_cat:
 	mov rax, SYSCALL(READ)
-	mov rbx, rdi
-	mov rcx, buf
-	mov rdx, bufsize
+	mov rdi, rdi
+	lea rsi, [rel buf]
+	mov rdx, buffsize
 	syscall
-	mov rdi, rdx
+	mov rdi, rsi
 	call _ft_puts
 	leave
 	ret
