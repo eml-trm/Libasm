@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libasm.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etermeau <etermeau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/19 13:08:18 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/26 14:56:54 by tmerlier         ###   ########.fr       */
+/*   Created: 2015/03/19 13:08:18 by etermeau          #+#    #+#             */
+/*   Updated: 2015/03/26 14:56:54 by etermeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,7 @@ void		ft_cat(int fd);
 ** BONUS
 */
 void		ft_putstr(const char *s);
+void		ft_putstr_fd(const char *s, int fd);
+void		ft_putstr_cyan(const char *s);
 
 #endif

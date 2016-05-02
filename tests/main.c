@@ -3,28 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmerlier <tmerlier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etermeau <etermeau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/19 18:20:56 by tmerlier          #+#    #+#             */
-/*   Updated: 2015/03/26 16:15:05 by tmerlier         ###   ########.fr       */
+/*   Created: 2015/03/19 18:20:56 by etermeau          #+#    #+#             */
+/*   Updated: 2015/03/26 16:15:05 by etermeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <libasm.h>
+#include "libasm.h"
 #include <string.h>
 #include <fcntl.h>
+#include <unistd.h>
+
 
 int main(void)
 {
-	printf("/////////////// FT_CAT ///////////////\n");
-
-	int fd = open("Makefile", O_RDONLY);
-	ft_cat(fd);
-	close(fd);
-
 	int		digit = '5';
 	int		alpha = 'H';
 
@@ -116,7 +112,12 @@ int main(void)
 	printf("/////////////// FT_STRDUP ///////////////\n");
 	printf("dup = '%s'\n", dup);
 	free(dup);
-	printf("dup has been freed\n\n\n");
+	printf("dup has been freed\n\n");
+
+	printf("/////////////// FT_CAT ///////////////\n");
+	int fd = open("Makefile", O_RDONLY);
+	ft_cat(fd);
+	close(fd);
 
 	return (0);
 }

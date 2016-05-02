@@ -21,7 +21,9 @@ SRC = ft_isdigit.s \
 	  ft_memcpy.s \
 	  ft_strdup.s \
 	  ft_cat.s \
-	  ft_putstr.s
+	  ft_putstr.s \
+	  ft_putstr_cyan.s \
+	  ft_putstr_fd.s
 
 O_FILES = $(SRC:.s=.o)
 
@@ -40,13 +42,16 @@ $(NAME): $(O_FILES)
 	@ar -rcs $(NAME) $@
 
 test: $(NAME)
-	@$(CC) $(FLAGS) $< tests/main.c -I $(HEADER)
+	@$(CC) $(FLAGS) $< -o libasm tests/main.c -I $(HEADER)
+
+bonus: $(NAME)
+	@$(CC) $(FLAGS) $< -o bonus tests/main_bonus.c -I $(HEADER)
 
 clean:
 	@rm -f $(O_FILES)
 
 fclean: clean
 	@$(eval STATE = Created)
-	@rm -f $(NAME)
+	@rm -f $(NAME) bonus libasm
 
 re: fclean all
